@@ -9,7 +9,7 @@ import (
   //"sync"
 )
 
-var std = log.New(os.Stderr, "", log.LstdFlags)
+var std = log.New(os.Stderr, "", log.LstdFlags|log.Lshortfile)
 
 //var std_mu synx.Mutex
 
@@ -18,7 +18,7 @@ func SetOutput(w io.Writer) {
   //std_mu.Lock()
   //defer std_mu.Unlock()
   //std.out = w
-  std = log.New(w, "", log.LstdFlags)
+  std = log.New(w, "", log.LstdFlags|log.Lshortfile)
 }
 
 // Flags returns the output flags for the standard logger.
