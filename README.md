@@ -1,0 +1,1 @@
+A simple color logger utilizing https://github.com/wsxiaoys/terminal
